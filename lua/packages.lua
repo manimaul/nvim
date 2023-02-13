@@ -62,11 +62,17 @@ return require('packer').startup(function(use)
 	use 'lewis6991/gitsigns.nvim'
 	use 'nvim-lualine/lualine.nvim' -- Fancier statusline
 	use {  -- "gc" to comment visual regions/lines
-	'numToStr/Comment.nvim',
-	config = function()
-		require('Comment').setup()
-	end
-}
+		'numToStr/Comment.nvim',
+		config = function()
+			require('Comment').setup()
+		end
+	}
+
+	use {
+		'ThePrimeagen/harpoon',
+		requires = { {'nvim-lua/plenary.nvim'} }
+	}
+
 
 end)
 
